@@ -352,7 +352,9 @@ p {
     position: relative;
     z-index: 2;
 }
-
+.menu_area #nav .nav-item {
+    position: relative;
+}
 .menu_area #nav .nav-link {
     color: #fff;
     display: block;
@@ -365,7 +367,25 @@ p {
     padding: 35px 15px;
 }
 
-
+.menu_area #nav .nav-link:last-child:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+.menu_area #nav .nav-link:last-child:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+    transition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+}
 .menu_area nav ul li > a:hover {
     color: #fb397d;
 }
